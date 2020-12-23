@@ -1,0 +1,18 @@
+.social-form-h2{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 18px;
+    margin-top: 28px;
+    border-top: 1px solid gray
+}
+.social-form-h2 span{
+    color: #bff8fd;
+    font-size: 28px;
+    background: #2caeba;
+    padding: 0px 11px;
+    border-radius: 50%;
+}
+.admin-img{
+    width: 200px;
+    border-radius: 5px;
+}
