@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react';
 import './Login.css';
 import firebase from "firebase/app";
 import "firebase/auth";
-import firebaseConfig from '../../firebaseConfig';
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import firebaseConfig from '../../firebaseConfig';
+
 
 
 
