@@ -3,6 +3,23 @@
     height: 100vh;
     position: relative;
 }
+.home .home_container .title .waviy {
+    position: relative;
+    animation: waviy 0.8s 1 ;
+}
+.home .home_container .title .waviy span {
+    position: relative;
+    display: inline-block;
+    animation: waviy_span 3s 1;
+    letter-spacing: 3px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    line-height: 1.30;
+    font-weight: 800;
+}
+.dit_hide{
+    color: transparent;
+}
 .home:before {
     content: "";
     position: absolute;
@@ -12,28 +29,21 @@
     bottom: 0;
     background: white;
 }
-.home .home-container{
+.home .home_container{
     padding-top: 130px;
 }
-.home .home-container .title{
+.home .home_container .title{
     margin-top: 130px;
 }
-.home .home-container .title .underline{
+.home .home_container .title .underline{
     width: 5rem;
     height: 4px;
     border-radius: 5px;
     margin-bottom: 8px;
     background: #2caeba;
+    animation: underline 1.2s 1 ;
 }
-.home .home-container .title h1{
-    letter-spacing: 3px;
-    text-transform: capitalize;
-    font-family: 'Nunito', sans-serif;
-    font-size: 50px;
-    line-height: 1.30;
-    font-weight: 800;
-}
-.home .home-container .title h4{
+.home .home_container .title h4{
     letter-spacing: 2px;
     text-transform: capitalize;
     font-family: 'Nunito', sans-serif;
@@ -56,39 +66,49 @@
     margin-bottom: 20px;
     margin-top: 20px;
 }
+.home_container .ani{
+    animation: home_btn 1s 1 ;
+}
 .home-btn:hover{
     background-color: #52d1da;
     color: black;
 }
-.home .home-container .biDhan-img{
+.home .home_container .biDhan-img{
     width: 590px;
     margin-left: -50px;
+    animation: biDhan_img 1s 1 ;
 }
-.home .home-container .social-links{
+.home .home_container .social-links{
     margin-top: 14px;
+    animation: biDhan_img 0.6s 1 ;
 }
-.home .home-container .social-links a #social-icon {
+.home .home_container .social-links a #social-icon {
     font-size: 32px;
     margin-right: 14px;
     color: black;
     transition: all 0.5s ease;
 }
-.home .home-container .social-links a #social-icon:hover {
+.home .home_container .social-links a #social-icon:hover {
     color: #2caeba;
     transform: scale(1.1);
 }
+@keyframes home_btn{from{transform: translateX(-200px);}to{transform: translateX(0px);}}
+@keyframes underline{from{transform: translate(600px);}to{transform: translate(0px);}}
+@keyframes waviy{from{transform: translateY(-600px);}to{transform: translateY(0px);}}
+@keyframes biDhan_img{from{transform: scale(0.5);}to{transform: scale(1);}}
+@keyframes waviy_span{0%,80% {transform: rotate(360deg)}}
 @media screen and (max-width: 768px){
     .home{
         height: 100vh;
     }
 }
 @media screen and (max-width: 600px){
-    .home .home-container .biDhan-img{
+    .home .home_container .biDhan-img{
         margin-left: 0px;
         margin-top: 34px;
         margin-bottom: -100px;
     }
-    .home .home-container{
+    .home .home_container{
         padding-top: 20px;
     }
 }

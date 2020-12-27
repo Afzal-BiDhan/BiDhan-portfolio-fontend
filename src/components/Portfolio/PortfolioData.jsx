@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Portfolio from './Portfolio';
+import Portfolio from './Portfolio.jsx';
 
 class PortfolioData extends Component {
 
@@ -8,17 +8,14 @@ class PortfolioData extends Component {
         productCopy: []
 
     }
-
     componentDidMount() {
         fetch('https://gentle-fjord-53714.herokuapp.com/projectInfo')
             .then((response) => response.json())
             .then(booksList => {
                 this.setState({ products: booksList });
-                console.log(booksList)
             });
     }
     handleBtns = (e) => {
-        console.log(e.target.value);
         let productCopy;
         if (e.target.value === "All") {
             productCopy = this.state.products;
@@ -32,8 +29,10 @@ class PortfolioData extends Component {
         })
         const x = document.getElementById('hide');
         x.style.setProperty("display", 'none',);
-    }
 
+        const y = document.getElementById('hide_pageBtn');
+        y.style.setProperty("display", 'block',);
+    }
     render() {
 
         return (

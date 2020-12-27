@@ -5,10 +5,11 @@ import "firebase/auth";
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
 import firebaseConfig from '../../firebaseConfig';
-
-
-
-
+import avatar from '../../images/avatar.svg';
+import bg from '../../images/bg.svg';
+import wave from '../../images/wave.png';
+import PersonIcon from '@material-ui/icons/Person';
+import { NoEncryptionSharp } from '@material-ui/icons';
 firebase.initializeApp(firebaseConfig);
 
 function Login() {
@@ -56,21 +57,20 @@ function Login() {
         e.preventDefault();
     }
 
-
     return (
         <div className="login">
-            <img src='' alt="" className="wave" />
+            <img src={wave} alt="" className="wave" />
             <div className="login-container">
                 <div className="img">
-                    <img src='' alt="" />
+                    <img src={bg} alt="" />
                 </div>
                 <div className="login-content">
                     <form onSubmit={handleSubmit} className="login-form">
-                        <img src='' alt="" />
+                        <img src={avatar} alt="" />
                         <h2 className="title">Login Admin Panel</h2>
                         <div className="input-div one">
                             <div className="i">
-                                {/* <PersonIcon className="user-icon" /> */}
+                                <PersonIcon className="user-icon" />
                             </div>
                             <div className="div">
                                 <input
@@ -85,7 +85,7 @@ function Login() {
                         </div>
                         <div className="input-div">
                             <div className="i">
-                                {/* <NoEncryptionIcon className="user-icon" /> */}
+                                <NoEncryptionSharp className="user-icon" />
                             </div>
                             <div className="div">
                                 <input

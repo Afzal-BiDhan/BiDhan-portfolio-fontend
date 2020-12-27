@@ -5,6 +5,28 @@
 *, ::after, ::before {
   box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#37bcc8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+button{
+  outline: none !important;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap');

@@ -1,175 +1,193 @@
 .about{
-    margin-top: 75px;
+  margin-top: 75px;
 }
 .about-text {
-    margin-top: 24px;
+  margin-top: 24px;
+}
+.row.about-Info {
+  padding-bottom: 100px;
+  margin-top: 23px;
+}
+.personal-Info {
+  margin-top: 30px;
+}
+.about_ani{
+  animation: waviy 0.5s 1 ;
+}
+.info_p {
+  font-weight: 700;
 }
 .about-text h3{
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: #302e4d;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #302e4d;
 }
 .about-text h3 span{
-    font-style: italic;
-    color: #37bcc8;
-    border-bottom: 1px solid grey;
-    padding-bottom: 3px;
+  font-style: italic;
+  color: #37bcc8;
+  border-bottom: 1px solid grey;
+  padding-bottom: 3px;
 }
 .about-text p{
-    font-size: 16px;
-    line-height: 25px;
-    color: #504e70;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #504e70;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
-
 .personal-info{
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .personal-info p{
-    font-size: 19px;
-    font-weight: 500;
-    border-bottom: 1px solid #cfcfcf;
-    padding-bottom: 5px;
+  font-size: 19px;
+  font-weight: 500;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 5px;
 }
-
 .skills .skill-item h5 {
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #302e4d;
-    text-transform: capitalize;
-    margin: 0;
-  }
-  .skills .skill-item .progress{
-    background-color: #e3e3e3;
-    height: 8px;
-    border-radius: 4px;
-    /* overflow: hidden; */
-    width: 100%;
-    position: relative;
-  }
-  .skills .skill-item{
-    margin-bottom: 5px;
-  }
-  .skills .skill-item .progress .progress-in {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 4px;
-  }
-
-  .skills .skill-item .progress .progress-in{
-      background-color:#37bcc8;
-  }
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #302e4d;
+  text-transform: capitalize;
+  margin: 0;
+}
+.skills .skill-item .progress{
+  background-color: #e3e3e3;
+  height: 8px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.skills .skill-item{
+  margin-bottom: 5px;
+}
+.skills .skill-item .progress .progress-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+}
 .skill-item span{
-    float: right;
+  float: right;
+}
+.buttons .btn_ani{
+  animation: home_btn 1s 1 ;
 }
 .personal-info a{
-    float: left;
+  float: left;
 }
-
-
-
-
-
 .education{
-    
-    margin-top: 30px;
-  }
-  .experience{
-    
-    margin-top: 30px;
-  }
-  .titlee{
-    font-size: 26px;
-    margin-bottom: 30px;
-    font-weight: 700;
-    color: #302e4d;
-  }
-  .timeline-box {
-    box-shadow: 2px 2px 8px 0px #888888;
-  }
-  .timeline {
-    background-color: #fdf9ff;
-    padding: 30px 15px;
-    border: 1px solid #d4d4d4;
-    border-radius: 10px;
-
-    position: relative;
-  }
-  .timeline .timeline-item{
-    position: relative;
-    padding-left: 37px;
-    padding-bottom: 50px;
-  }
-  .timeline .timeline-item:last-child{
-    padding-bottom: 0px;
-  }
-  .timeline .timeline-item::before{
-    content: '';
-    width: 1px;
-    position: absolute;
-    height: 100%;
-    left: 7px;
-    top: 1px;
-  }
-
-  .timeline .circle-dot{
-    position: absolute;
-    top: 1px;
-    left: 0;
-    height: 15px;
-    width: 15px;
-    left: 0px;
-    border-radius: 50%;
-  }
-  .timeline .timeline-data{
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 12px;
-    color: #504e70;
-  }
-  .timeline .timeline-title{
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-    color: #302e4d;
-  }
-  .timeline .timeline-text{
-    font-size: 16px;
-    line-height: 25px;
-    color: #504e70;
-    margin: 0;
-   
-  }
-  .dt{
-    padding: 0px 8px;
-    position: absolute;
-    top: 3px;
-  }
-  
+  margin-top: 30px;
+}
+.experience{
+  margin-top: 30px;
+}
+.titlee{
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #302e4d;
+}
+.timeline-box {
+  box-shadow: 2px 2px 8px 0px #888888;
+}
+.timeline {
+  background-color: #fdf9ff;
+  padding: 30px 15px;
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  position: relative;
+}
+.timeline .timeline-item{
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 50px;
+}
+.timeline .timeline-item:last-child{
+  padding-bottom: 0px;
+}
+.timeline .timeline-item::before{
+  content: '';
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 1px;
+}
+.timeline .circle-dot{
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  left: 0px;
+  border-radius: 50%;
+}
+.timeline .timeline-data{
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #504e70;
+}
+.timeline .timeline-title{
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #302e4d;
+}
+.timeline .timeline-text{
+  font-size: 16px;
+  line-height: 25px;
+  color: #504e70;
+  margin: 0;
+}
+.dt{
+  padding: 0px 8px;
+  position: absolute;
+  top: 3px;
+}
 .timeline .circle-dot,
 .timeline .timeline-item::before{
   background-color: #37bcc8;
 }
-
 .about-info{
-    padding-bottom: 50px;
-    padding-bottom: 50px;
-    border-top: 1px solid #c9c9c9;
-    margin-top: 24px;
+  padding-bottom: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #c9c9c9;
+  margin-top: 24px;
 }
-
 .about-btn{
-    margin-left: 14px;
+  margin-left: 14px;
 }
 .buttons{
-    margin-top: -6px;
+  margin-top: -6px;
 }
 .title-skills{
-    float: right;
+  float: right;
 }
+.skills .skill-item .progress .html,
+.css, .javascript, .wordpress,
+.react_js, .node_js, .express_js,
+.MongoDB{
+  background-color:#37bcc8;
+}
+.skills .skill-item .progress .html{animation: html 2s 1;}
+.skills .skill-item .progress .css{animation: css 2s 1;}
+.skills .skill-item .progress .javascript{animation: javascript 2s 1;}
+.skills .skill-item .progress .wordpress{animation: wordpress 2s 1;}
+.skills .skill-item .progress .react_js{animation: react_js 2s 1;}
+.skills .skill-item .progress .node_js{animation: node_js 2s 1;}
+.skills .skill-item .progress .express_js{animation: express_js 2s 1;}
+.skills .skill-item .progress .MongoDB{animation: MongoDB 2s 1;}
+@keyframes html{0%{width: 0;}80%{width: 80%;}}
+@keyframes css{0%{width: 0;}76%{width: 76%;}}
+@keyframes javascript{0%{width: 0;}70%{width: 70%;}}
+@keyframes wordpress{0%{width: 0;}77%{width: 77%;}}
+@keyframes react_js{0%{width: 0;}75%{width: 75%;}}
+@keyframes node_js{0%{width: 0;}69%{width: 69%;}}
+@keyframes express_js{0%{width: 0;}66%{width: 66%;}}
+@keyframes MongoDB{0%{width: 0;}70%{width: 70%;}}
