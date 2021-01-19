@@ -11,54 +11,47 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Afzal Bidhan</title>
 </head>
 
-<body>
+<body onload="onLoading()">
+
+  <div id="loading_body">
+    <div class="content-wrapper">
+      <div class="loading-bounce">
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+      </div>
+      <div class="shadow-wrapper">
+        <span class="shadow"></span>
+        <span class="shadow"></span>
+        <span class="shadow"></span>
+        <span class="shadow"></span>
+        <span class="shadow"></span>
+      </div>
+    </div>
+  </div>
+
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
 
   <script>
-    function updateSocialLink(id) {
-      const socialName = document.getElementById('name').value;
-      const socialURL = document.getElementById('url').value;
-      const data = { id, socialName, socialURL };
-      fetch(`https://gentle-fjord-53714.herokuapp.com/updateSocialLink/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(result => {
-          console.log('update okkk')
-        })
-    }
-    function displayNone() {
-      document.querySelector('.lightbox').style.setProperty("display", 'none');
-      console.log('ok')
+
+    const preloader = document.getElementById('loading_body');
+    const onLoading = () => {
+      preloader.style.display = 'none';
     }
 
-    function updatePinfo(id) {
-      const projectImage = document.getElementById('pImage').value;
-      const projectName = document.getElementById('pName').value;
-      const projectType = document.getElementById('pType').value;
-      const projectCategory = document.getElementById('pCategory').value;
-      const projectDuration = document.getElementById('pDuration').value;
-      const technologies = document.getElementById('pTechnologies').value;
-      const livePreview = document.getElementById('plivePreview').value;
-      const sourceCode = document.getElementById('psourceCode').value;
-      const data = { id, projectImage, projectName, projectType, projectCategory, projectDuration, technologies, livePreview, sourceCode };
-      fetch(`https://gentle-fjord-53714.herokuapp.com/updateProject/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(result => {
-          console.log('update okkk')
-        })
-    }
   </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+
 </body>
 
 </html>

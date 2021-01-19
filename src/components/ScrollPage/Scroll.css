@@ -1,0 +1,22 @@
+.scroll_icon{
+    margin-top: 10px;
+    animation: scrollTop 0.5s alternate ease infinite;
+    position: fixed;
+    bottom: 98px;
+    right: 34px;
+    z-index: 1;
+    font-size: 40px;
+    color: #bff8fd;
+    background-color: blue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@keyframes scrollTop {
+    from{
+        transform: translateY(2px);
+    }
+    to{
+        transform: translateY(-1px);
+    }
+}

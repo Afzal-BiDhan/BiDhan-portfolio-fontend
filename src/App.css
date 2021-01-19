@@ -27,6 +27,128 @@
 button{
   outline: none !important;
 }
-
+.mt-n{
+  margin-top: 100px
+}
+.underline {
+  background: #2caeba;
+  width: 110px;
+  height: 3px;
+  margin: auto;
+  border-radius: 14px;
+  margin-bottom: 30px
+}
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&display=swap');
+.admin{
+  margin-right: 15px;
+  margin-top: 75px;
+}
+.admin_sidbar{
+  position: fixed;
+  background-color: #2caeba;
+  height: 100vh;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.admin_panel{
+  position: relative;
+  left: 16.56%;
+}
+.nav ul li a{
+  color: black;
+}
+a.nav-link.active {
+  color: #2caeba!important;
+}
+a{
+  color: black;
+}
+a:hover{
+  color: #6e6e6e;
+  text-decoration: none;
+}
+
+.loading_1{
+  position: relative;
+  left: 120px;
+}
+
+
+
+
+/* api loading */
+.api_loading{
+  height: 50vh;
+}
+#shrinking-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation-name: shrink-2;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#shrinking-circle1 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation-name: shrink;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes shrink {
+  0% {
+    width: 100px;
+    height: 100px;
+    background-color: #0ff;
+    left: 65%;
+  }
+  50% {
+    width: 40px;
+    height: 40px;
+    background-color: #0ee;
+    left: 35%;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    background-color: #0ff;
+    left: 65%;
+  }
+}
+@keyframes shrink-2 {
+  0% {
+    width: 100px;
+    height: 100px;
+    background-color: #0b6;
+    left: 35%;
+  }
+  50% {
+    width: 40px;
+    height: 40px;
+    background-color: #0fa;
+    left: 65%;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    background-color: #0b6;
+    left: 35%;
+  }
+}

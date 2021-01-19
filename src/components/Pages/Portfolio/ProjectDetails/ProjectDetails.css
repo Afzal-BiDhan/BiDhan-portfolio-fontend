@@ -1,0 +1,34 @@
+
+/* carousel style */
+.carousel {
+    text-align: center;
+}
+.thumb {
+    width: 150px!important;
+}
+.carousel.carousel-slider {
+    border-radius: 10px!important;
+}
+.carousel .control-dots .dot {
+    background: #2caeba!important;
+    width: 10px!important;
+    height: 10px!important;
+}
+.carousel .thumb.selected, .carousel .thumb:hover {
+    border: 3px solid #2caeba!important;
+    border-radius: 10px;
+}
+.carousel .slide {
+    background: none!important;
+}
+/* carousel end style */
+
+.project_id_title span{
+    color: #2caeba;
+}
+.action{
+    display: flex;
+}
+.project_action{
+    flex: auto;
+}

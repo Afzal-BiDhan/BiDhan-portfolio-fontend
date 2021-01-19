@@ -1,0 +1,12 @@
+.project_view ul li{
+    font-weight: 700;
+}
+.project_view ul li span{
+    font-weight: 600;
+    color: #535353;
+}
+.socialAdd .projectd_img img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #2caeba;
+}

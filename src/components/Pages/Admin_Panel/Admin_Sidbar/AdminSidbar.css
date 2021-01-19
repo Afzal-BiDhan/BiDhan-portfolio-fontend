@@ -1,0 +1,57 @@
+.adminSidbar{
+    text-align: center;
+    margin-top: 14px;
+}
+h3.das_title {
+    border-bottom: 1px solid white;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+.adminSidbar a{
+    color: black;
+}
+.socialAdd .input-group-text{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 15px;
+}
+.socialVisit p a{
+    color: white;
+    font-weight: 600;
+    transition: all 1s;
+}
+.socialVisit p{
+    transition: all 0.4s;
+}
+.socialVisit p a:hover{
+    text-decoration: none;
+}
+.socialVisit .add_links:hover{
+    transform: scale(1.04);
+}
+.social_tr .MuiSvgIcon-root{
+    font-size: 27px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.social_tr .MuiSvgIcon-root:hover{
+    transform: scale(1.1);
+}
+.projectVisit .project_info{
+    background: #f0f0f0;
+}
+.projectVisit .project_info img{
+    width: 170px;
+    border-radius: 5px;
+}
+.projectData img{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #2caeba;
+}
+.socialData .socialData_info{
+    float: right;
+}
+.adminSidbar nav ul a.nav-link.active {
+    color: #e0fcff!important;
+}
