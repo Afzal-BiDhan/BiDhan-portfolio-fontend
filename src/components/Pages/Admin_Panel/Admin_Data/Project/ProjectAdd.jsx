@@ -1,11 +1,12 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 const ProjectAdd = () => {
 
     let history = useHistory();
 
+    const [date, setDate] = useState();
     const [project, setProject] = useState({
         _id: "",
         name: "",
@@ -21,8 +22,10 @@ const ProjectAdd = () => {
         livePreview: "",
         sourceCode: "",
         error: "",
+        update: "updating",
+        updatingDate: "",
     });
-    const { _id, image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode } = project;
+    const { _id, image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode, update, updatingDate } = project;
 
     const onInputChange = (e) => {
         setProject({ ...project, [e.target.name]: e.target.value });
@@ -50,9 +53,17 @@ const ProjectAdd = () => {
             });
     };
 
+    useEffect(() => {
+        const d = new Date();
+        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+        const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+        setDate(`${mo} ${da} ${ye}`);
+    }, [date]);
+
     return (
         <div className="container socialAdd">
-            <div className="w-75 mx-auto shadow p-5 mt-5">
+            <div className="mx-auto shadow p-5 mt-5">
                 <Link to="/admin/project" className="btn btn-primary socialData_info float-right">back to </Link>
                 <h2 className="text-center mb-2">Add Project</h2>
                 <h4 className="text-danger text-center mb-4">{project.error}</h4>
@@ -108,6 +119,14 @@ const ProjectAdd = () => {
                     <div className="input-group flex-nowrap mb-3">
                         <span className="input-group-text">Source Code</span>
                         <input name="sourceCode" value={sourceCode} onChange={(e) => onInputChange(e)} type="text" className="form-control form-control-lg" placeholder="Website Source Code" />
+                    </div>
+                    <div className="input-group flex-nowrap mb-3">
+                        <span className="input-group-text">update</span>
+                        <input name="update" value={update} onChange={(e) => onInputChange(e)} type="text" className="form-control form-control-lg" placeholder="Website Source Code" />
+                    </div>
+                    <div className="input-group flex-nowrap mb-3">
+                        <span className="input-group-text">Updating Date / {date} :</span>
+                        <input name="updatingDate" value={updatingDate} onChange={(e) => onInputChange(e)} type="text" className="form-control form-control-lg" placeholder={date} />
                     </div>
                     <button className="btn btn-primary btn-block">Add Project</button>
                 </form>

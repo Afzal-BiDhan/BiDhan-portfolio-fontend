@@ -2,8 +2,6 @@ import React from 'react';
 import NavBar from "./Layout/Navbar/Navbar";
 import { AllNavbar } from "./Layout/Navbar/NavStyled";
 import AdminSidbar from "./Pages/Admin_Panel/Admin_Sidbar/AdminSidbar";
-import loading1 from '../images/lodaing_1.gif';
-import { LinearProgress } from '@material-ui/core';
 
 export const AdminRoute = ({ data }) => {
     return (
@@ -28,4 +26,4 @@ export const ApiLoading = () => {
             <div id="shrinking-circle1"></div>
         </div>
     )
-}
+};

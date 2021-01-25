@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Projects = (props) => {
     const { image, livePreview, _id, name } = props.product;
-    console.log(_id);
     return (
 
         <div className="col-md-4">

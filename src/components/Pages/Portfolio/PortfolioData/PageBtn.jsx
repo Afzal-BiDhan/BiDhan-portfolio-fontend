@@ -8,6 +8,8 @@ const PageBtn = (props) => {
         const value = showPerPage * count;
         onPageChange(value - showPerPage, value);
     }, [count]);
+
+
     const onButtonClick = (type) => {
         if (type === "prev") {
             if (count === 1) {
@@ -25,7 +27,10 @@ const PageBtn = (props) => {
                 setCount(count + 1);
             }
         }
-    }
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    };
+
+
     return (
         <div className="page_btn text-center mb-5">
             <button className="home-btn btn mr-5" onClick={() => onButtonClick('prev')}>Previous</button>

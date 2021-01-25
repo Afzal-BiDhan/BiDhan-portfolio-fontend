@@ -8,25 +8,11 @@ const EditProject = () => {
     const { id } = useParams();
     let history = useHistory();
 
+    const [date, setDate] = useState();
     const [loading, setLodaing] = useState(false);
-    const [project, setProject] = useState({
-        _id: "",
-        name: "",
-        image: "",
-        imageOne: "",
-        imageTwo: "",
-        imageThree: "",
-        type: "",
-        description: "",
-        category: "",
-        duration: "",
-        technologies: "",
-        livePreview: "",
-        sourceCode: "",
-        error: "",
-    });
+    const [project, setProject] = useState({ _id: "", name: "", image: "", imageOne: "", imageTwo: "", imageThree: "", type: "", description: "", category: "", duration: "", technologies: "", livePreview: "", sourceCode: "", error: "", update: "", updatingDate: "" });
 
-    const { _id, image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode } = project;
+    const { _id, image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode, update, updatingDate } = project;
 
     const onInputChange = (e) => {
         setProject({ ...project, [e.target.name]: e.target.value });
@@ -39,7 +25,7 @@ const EditProject = () => {
             setProject(result.data);
             setLodaing(true);
         };
-        loadUser()
+        loadUser();
     }, []);
 
     const updateProject = (id) => {
@@ -51,12 +37,9 @@ const EditProject = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
                 if (result.modifiedCount > 0) {
                     history.push("/admin/project");
                     alert("Update successful");
-                } else {
-                    alert("Update Your Project Data");
                 }
             })
             .catch(error => {
@@ -64,9 +47,16 @@ const EditProject = () => {
                 newUserInfo.error = error.message;
                 newUserInfo.success = false;
                 setProject(newUserInfo);
-                console.log(newUserInfo);
             });
     };
+    useEffect(() => {
+        const d = new Date();
+        const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+        const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+        const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+        setDate(`${mo} ${da} ${ye}`);
+    }, [date]);
+
     return (
         <div className="container socialAdd my-5">
             {loading ?
@@ -132,6 +122,14 @@ const EditProject = () => {
                             <div className="input-group flex-nowrap mb-3">
                                 <span className="input-group-text">Source Code</span>
                                 <input name="sourceCode" value={sourceCode} onChange={(e) => onInputChange(e)} type="text" className="form-control" placeholder="Website Source Code" />
+                            </div>
+                            <div className="input-group flex-nowrap mb-3">
+                                <span className="input-group-text">updating</span>
+                                <input name="update" value={update} onChange={(e) => onInputChange(e)} type="text" className="form-control" placeholder="updating / complete" />
+                            </div>
+                            <div className="input-group flex-nowrap mb-3">
+                                <span className="input-group-text">Updating Date / {date} :</span>
+                                <input name="updatingDate" value={updatingDate} onChange={(e) => onInputChange(e)} type="text" className="form-control form-control-lg" placeholder={date} />
                             </div>
                             <button onClick={() => updateProject(id)} className="btn btn-warning btn-block">Update Project</button>
                         </div>

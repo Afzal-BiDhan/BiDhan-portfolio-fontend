@@ -5,7 +5,6 @@ import './App.css';
 import Login from './components/Pages/Login/Login.jsx';
 import About from "./components/Pages/About/About.jsx";
 import Home from "./components/Home/Home.jsx";
-import PortfolioData from './components/Pages/Portfolio/PortfolioData.jsx';
 import Contact from "./components/Pages/Contact/Contact.jsx";
 import AdminHome from './components/Pages/Admin_Panel/Admin_Home/AdminHome';
 import SocialAdd from './components/Pages/Admin_Panel/Admin_Data/Social/SocialAdd.jsx';
@@ -22,6 +21,7 @@ import ProjectDetails from './components/Pages/Portfolio/ProjectDetails/ProjectD
 import ScrollToTop from './components/ScrollPage/ScrollToTop';
 import ScrollToTopIcon from './components/ScrollPage/ScrollToTopIcon';
 import { AnimatePresence } from 'framer-motion';
+import Portfolio from './components/Pages/Portfolio/Portfolio';
 
 export const UserContext = createContext();
 
@@ -35,11 +35,12 @@ const App = () => {
           <Switch>
             <Route exact path="/"><Home /></Route>
             <Route exact path="/about"><About /></Route>
-            <Route exact path="/portfolio"><PortfolioData /></Route>
+            <Route exact path="/portfolio"><Portfolio /></Route>
             <Route exact path="/contact"><Contact /></Route>
             <Route exact path="/login"><Login /></Route>
             <Route exact path="/project/details/:id"><ProjectDetails /></Route>
 
+            
             <PrivateRoute exact path="/admin/home"><AdminRoute data={<AdminHome />} /></PrivateRoute>
             <PrivateRoute exact path="/admin/socialadd"><AdminRoute data={<SocialAdd />} /></PrivateRoute>
             <PrivateRoute exact path="/admin/social"><AdminRoute data={<SocialVisit />} /></PrivateRoute>

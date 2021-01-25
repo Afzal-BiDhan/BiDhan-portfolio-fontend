@@ -23,8 +23,10 @@ const ProjectData = () => {
         livePreview: "",
         sourceCode: "",
         error: "",
+        update: "",
+        updatingDate: "",
     });
-    const { image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode } = project;
+    const { image, imageOne, imageTwo, imageThree, name, type, description, category, duration, technologies, livePreview, sourceCode, update, updatingDate } = project;
 
     const loadProject = async () => {
         const url = `${process.env.REACT_APP_findProject}/${id}`;
@@ -67,6 +69,8 @@ const ProjectData = () => {
                                 <li className="list-group-item">Technologies: <span>{technologies}</span></li>
                                 <li className="list-group-item">Live Preview: <span>{livePreview}</span></li>
                                 <li className="list-group-item">Source Code: <span>{sourceCode}</span></li>
+                                <li className="list-group-item">update: <span>{update}</span></li>
+                                <li className="list-group-item">Updating Date: <span>{updatingDate}</span></li>
                             </ul>
                         </div>
                     </div>
